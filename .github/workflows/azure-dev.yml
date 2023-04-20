@@ -4,7 +4,7 @@ on:
     branches:
       - main
       - master
-      - asa-support
+      - azd-support
 
 jobs:
   build:
