@@ -1,0 +1,16 @@
+name: web-application-asa
+metadata:
+  template: web-application-asa@0.0.1-beta
+services:
+  sweb:
+    project: ./src/web
+    host: springapp
+    language: java
+    spring:
+      deploymentName: default
+    hooks:
+      prepackage:
+        shell: pwsh
+        run: cd ../client;mvn clean install
+infra:
+  provider: terraform
