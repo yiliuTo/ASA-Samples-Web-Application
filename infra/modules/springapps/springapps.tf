@@ -30,7 +30,7 @@ resource "azurerm_spring_cloud_service" "asa_instance" {
 
 
 resource "azurerm_spring_cloud_app" "asa_app" {
-  name                = "sweb"
+  name                = "simple-todo-web"
   resource_group_name = var.rg_name
   service_name        = azurerm_spring_cloud_service.asa_instance.name
 

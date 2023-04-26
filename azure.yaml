@@ -2,7 +2,7 @@ name: web-application-asa
 metadata:
   template: web-application-asa@0.0.1-beta
 services:
-  sweb:
+  simple-todo-web:
     project: ./src/web
     host: springapp
     language: java
@@ -10,7 +10,11 @@ services:
       deploymentName: default
     hooks:
       prepackage:
-        shell: pwsh
-        run: cd ../client;mvn clean install
+        windows:
+          shell: pwsh
+          run: cd ../client;mvn clean install
+        posix:
+          shell: sh
+          run: cd ../client;mvn clean install
 infra:
   provider: terraform

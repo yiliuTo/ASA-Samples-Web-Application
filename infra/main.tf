@@ -52,5 +52,5 @@ module "asa_api" {
   location       = var.location
   rg_name        = azurerm_resource_group.rg.name
 
-  tags               = merge(local.tags, { azd-service-name : "sweb" })
+  tags               = merge(local.tags, { azd-service-name : "simple-todo-web" })
 }
